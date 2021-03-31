@@ -3,11 +3,11 @@ import { ProductDto } from 'src/app/models/tutorial.model';
 import { TutorialService } from 'src/app/services/tutorial.service';
 
 @Component({
-  selector: 'app-tutorials-list',
-  templateUrl: './tutorials-list.component.html',
-  styleUrls: ['./tutorials-list.component.css']
+  selector: 'app-ProdcutAll-list',
+  templateUrl: './ProdcutAll-list.component.html',
+  styleUrls: ['./ProdcutAll-list.component.css']
 })
-export class TutorialsListComponent implements OnInit {
+export class GetAllProductListComponent implements OnInit {
   ProductDto?: ProductDto[];
 
   constructor(private tutorialService: TutorialService) { }
