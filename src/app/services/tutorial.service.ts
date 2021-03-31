@@ -8,12 +8,11 @@ const baseUrl = 'https://localhost:44309/api/v1/product/All';
 @Injectable({
   providedIn: 'root'
 })
-export class TutorialService {
+export class ProductAllService {
 
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<ProductDto[]> {
-    console.log('1',baseUrl);
     
     return this.http.get<ProductDto[]>(baseUrl);
   }

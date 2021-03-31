@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TutorialService } from 'src/app/services/tutorial.service';
+import { ProductAllService } from 'src/app/services/tutorial.service';
 
 @Component({
   selector: 'app-add-tutorial',
@@ -10,7 +10,7 @@ export class AddTutorialComponent implements OnInit {
 
   submitted = false;
 
-  constructor(private tutorialService: TutorialService) { }
+  constructor(private productAllService: ProductAllService) { }
 
   ngOnInit(): void {
   }
