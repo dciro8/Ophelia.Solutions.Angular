@@ -1,35 +1,41 @@
 <div>
   <div class="submit-form">
-    <div *ngIf="!submitted">
-      <div class="form-group">
-        <label for="title">Title</label>
-        <input
-          type="text"
-          class="form-control"
-          id="title"
-          required
-        
-          name="title"
-        />
-      </div>
-
-      <div class="form-group">
-        <label for="description">Description1234</label>
+     
+    <div class="form-group">
+        <label for="description">Ingress Year</label>
         <input
           class="form-control"
-          id="description"
-          required
-         
-          name="description"
-        />
-      </div>
-
-      <button (click)="saveTutorial()" class="btn btn-success">Submit</button>
+          id="year"
+          type="number" 
+          required [(ngModel)]="productYear.year"
+          name="year"/>
+  </div>
+      <button (click)="getRegister()" class="btn btn-success">Submit</button>
+   
+<br>
+<br> 
+    <div  *ngIf="submitted" class="col-md-12">
+      <h4>Sales Product for Year</h4>
+      
+        <table class="table table-dark table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Name </th>
+              <th scope="col">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr 
+            *ngFor="let val of salesForYear; let i = index">
+            
+              <th scope="row">{{val.name }} </th>
+              <td> {{val.total| currency}} </td>
+            </tr>
+           
+          </tbody>
+        </table>
     </div>
+  
 
-    <div *ngIf="submitted">
-      <h4>Tutorial was submitted successfully!</h4>
-      <button class="btn btn-success">Add</button>
-    </div>
   </div>
 </div>

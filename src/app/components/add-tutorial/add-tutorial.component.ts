@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductAllService } from 'src/app/services/tutorial.service';
+import { ProductDto } from 'src/app/models/Product.model';
+import { ProductYearDto, SalesForYear } from 'src/app/models/ProductForYear';
+import { ProductAllService } from 'src/app/services/Product.service';
 
 @Component({
   selector: 'app-add-tutorial',
@@ -9,19 +11,39 @@ import { ProductAllService } from 'src/app/services/tutorial.service';
 export class AddTutorialComponent implements OnInit {
 
   submitted = false;
-
+  productYear: ProductYearDto = {};
+  salesForYear?:SalesForYear[];
+  ProductDto?: ProductDto[];
   constructor(private productAllService: ProductAllService) { }
 
   ngOnInit(): void {
   }
 
-  saveTutorial(): void {
-  
+  getRegister(): void {
+    console.log('year', this.productYear);
 
+    this.getProductForYear();
   }
 
   newTutorial(): void {
-   
+  }
+  
+  getProductForYear(): void {
+    this.productAllService.getProductForYear(this.productYear)
+      .subscribe(
+        data => {
+          if (data.length>0){
+            this.submitted=true;
+          }
+          else
+          {
+            this.submitted=false;}
+          this.salesForYear = data;
+        },
+        error => {
+          console.log(error);
+        });
   }
 
 }
+ 
