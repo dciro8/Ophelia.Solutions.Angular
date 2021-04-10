@@ -4,11 +4,11 @@ import { ProductYearDto, SalesForYear } from 'src/app/models/ProductForYear';
 import { ProductAllService } from 'src/app/services/Product.service';
 
 @Component({
-  selector: 'app-add-tutorial',
-  templateUrl: './add-tutorial.component.html',
-  styleUrls: ['./add-tutorial.component.css']
+  selector: 'app-GetSaleYear',
+  templateUrl: './GetSaleYear.component.html',
+  styleUrls: ['./GetSaleYear.component.css']
 })
-export class AddTutorialComponent implements OnInit {
+export class GetSaleYearComponent implements OnInit {
 
   submitted = false;
   productYear: ProductYearDto = {};

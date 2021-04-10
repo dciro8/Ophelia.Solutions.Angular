@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { GetAllProductListComponent } from './components/ProdcutAll-list/ProdcutAll-list.component';
 import { TutorialDetailsComponent } from './components/tutorial-details/tutorial-details.component';
-import { AddTutorialComponent } from './components/add-tutorial/add-tutorial.component';
+import { GetSaleYearComponent } from './components/Billing/GetSaleYear.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'ProductAll', pathMatch: 'full' },
   { path: 'ProductAll', component: GetAllProductListComponent },
   { path: 'ProductAll/:id', component: TutorialDetailsComponent },
-  { path: 'add', component: AddTutorialComponent }
+  { path: 'add', component: GetSaleYearComponent }
 ];
 
 @NgModule({

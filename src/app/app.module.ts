@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AddTutorialComponent } from './components/add-tutorial/add-tutorial.component';
+import { GetSaleYearComponent } from './components/Billing/GetSaleYear.component';
 import { TutorialDetailsComponent } from './components/tutorial-details/tutorial-details.component';
 
 import {GetAllProductListComponent} from './components/ProdcutAll-list/ProdcutAll-list.component';
@@ -13,7 +13,7 @@ import {GetAllProductListComponent} from './components/ProdcutAll-list/ProdcutAl
 @NgModule({
   declarations: [
     AppComponent,
-    AddTutorialComponent,
+    GetSaleYearComponent,
     TutorialDetailsComponent,
     GetAllProductListComponent
   ],
