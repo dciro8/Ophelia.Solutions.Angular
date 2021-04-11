@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { ProductDto } from '../models/Product.model';
 import { ProductYearDto, SalesForYear } from '../models/ProductForYear';
 import { nullSafeIsEquivalent } from '@angular/compiler/src/output/output_ast';
+import { Guid } from 'guid-typescript';
+import { ResponseMessage } from '../models/ResponseMessage.model';
 
 const baseUrl = 'https://localhost:44309';
 
@@ -24,30 +26,26 @@ export class ProductAllService {
   getProductForYear(model: ProductYearDto): Observable<SalesForYear[]> {
 
     let body = new URLSearchParams();
-    let year45 = model.year?.toString();
-   // body.set('@parameter', '2000');
+    let year = model.year?.toString();
     var url: string = "/api/v1/NextSale/GetSalesForYear?year=";
-    
-    return this.http.get<any>(`${baseUrl}${url}`+year45);
-    /*
-if (year45){
-    let param= new HttpParams()
-    
-    param.append('year', year45.toString());
-    console.log('ingress2345',year45.toString()); 
-    return this.http.get<any>(`${baseUrl}${url}`, {params:param});
+    return this.http.get<any>(`${baseUrl}${url}` + year);
   }
-  else{
-    
-    console.log('ingress2345'); 
-    let params= new HttpParams()
- 
-    params.append('year', '2000');
-     return this.http.get<any>(`${baseUrl}${url}`, {params:params});
+
+  setProduct(model: ProductDto): Observable<ResponseMessage> {
+
+    var url: string = "/api/v1/product/CreteProduct";
+
+    model.id = Guid.create().toString();
+
+    let bodyConvert = JSON.stringify(model);
+
+    const httpOptions = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    }
+    return this.http.post<any>(`${baseUrl}${url}`, bodyConvert, httpOptions);
     
   }
- */
-}
+
 
   /*  create(data: any): Observable<any> {
       console.log('3');

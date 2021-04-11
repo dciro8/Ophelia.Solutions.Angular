@@ -9,13 +9,15 @@ import { GetSaleYearComponent } from './components/Billing/GetSaleYear.component
 import { TutorialDetailsComponent } from './components/tutorial-details/tutorial-details.component';
 
 import {GetAllProductListComponent} from './components/ProdcutAll-list/ProdcutAll-list.component';
+import { CreateProductComponent } from './components/create-product/create-product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GetSaleYearComponent,
     TutorialDetailsComponent,
-    GetAllProductListComponent
+    GetAllProductListComponent,
+    CreateProductComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,72 @@
+<div>
+    <div class="submit-form">
+        <label for="description">Create Product</label>
+
+        <div class="form-group">
+            <label for="description">Ingress Code</label>
+            <input class="form-control" id="code" required [(ngModel)]="productDto.code" name="code" />
+        </div>
+
+        <div class="form-group">
+            <label for="description">Ingress Name</label>
+            <input class="form-control" id="Name" required [(ngModel)]="productDto.name" name="Name" />
+        </div>
+
+        
+        <div class="form-group">
+            <label for="description">Ingress Price</label>
+            <input class="form-control" id="Price" 
+            type="number" required [(ngModel)]="productDto.price" name="Price" />
+        </div>
+
+        
+        <div class="form-group">
+            <label for="description">Ingress Quantity</label>
+            <input class="form-control" id="Quantity" 
+            type="number" required [(ngModel)]="productDto.quantity" name="Quantity" />
+        </div>
+
+        
+        <div class="form-group">
+            <label for="description">Ingress MinimunAlloweb</label>
+            <input class="form-control" id="MinimunAlloweb" 
+            type="number" required [(ngModel)]="productDto.minimunAlloweb" name="MinimunAlloweb" />
+        </div>
+
+        <button (click)="getRegister()" class="btn btn-success">Submit</button>
+    </div>
+
+    
+
+    
+    <br>
+    <br>
+    <div *ngIf="submitted" class="col-md-12">
+        <h4>Get Ingress Product</h4>
+        
+          <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Name Product</th>
+                <th scope="col">Code Product</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                
+                <th scope="col">Minimun Allo Web</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+              
+                    <th scope="row">{{productDto.name }} </th>
+                    <td> {{productDto.code }} </td>
+                    <td>{{productDto.price  | currency}} </td>
+                    <td>{{productDto.quantity }} </td>
+                    <td>{{productDto.minimunAlloweb}} </td>
+                  </tr>
+             
+            </tbody>
+          </table>
+      </div>
+
+</div>

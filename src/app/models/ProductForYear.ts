@@ -1,15 +1,12 @@
 
-export class ProductYearDto
-{
-//  year:string='';
-year?:number;
+export class ProductYearDto {
+  year?: number;
 
 }
 
 
 
-export class SalesForYear
-{
+export class SalesForYear {
   total?: number;
-  name ?: string;
+  name?: string;
 }
