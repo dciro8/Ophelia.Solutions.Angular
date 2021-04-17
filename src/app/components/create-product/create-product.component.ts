@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ProductDto } from 'src/app/models/Product.model';
 import { ResponseMessage } from 'src/app/models/ResponseMessage.model';
 import { ProductAllService } from 'src/app/services/Product.service';
+;
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-create-product',
@@ -34,8 +37,12 @@ export class CreateProductComponent implements OnInit {
       .subscribe(
         data => {
           this.response= data;
+console.log(this.response);
 
-          if (this.response != undefined && this.response.result !=undefined && this.response.result<0 ) {
+console.log(this.response.result);
+
+
+          if (this.response != undefined && this.response.result !=undefined && this.response.result>0 ) {
             this.submitted=true;
           }
           else {
