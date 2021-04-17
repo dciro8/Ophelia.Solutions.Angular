@@ -1,4 +1,5 @@
-{
+{"trasnlate":
+  {
   "Inicio": "Home123",
   "Activo": "Active",
   "SaveBtn": "Save",
@@ -28,4 +29,5 @@
   "SystemParameters": "System parameters",
   "Persona": "Person123",
   "TipoIdentificacion": "ID Type12"
-}
+
+}}
