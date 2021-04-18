@@ -1,142 +1,206 @@
-<div class="container-fluid">
+<div class="container">
+
   <div class="row">
-    <div class="col-sm-6">
-      <h1>
-        
-      </h1>
+    <div class="col-md-12">
+      <h2>{{ 'trasnlate.AdminProducLabel' | translate }}</h2>
     </div>
 
-    <div class="coe-card">
-      <div class="container col-md-12">
-        <div class="table-wrapper">
-          <div class="table-title">
-            <div class="row">
-              <div class="row col-md-12 justify-content-end pr-0">
-                <form class="form-inline">
-                  <div class="form-group">
-                    <label for="filter-value">Buscador:</label>
-                    <input
-                      name="filterValue"
-                      type="text"
-                      class="form-control mx-sm-3"
-                      placeholder="Buscar..."
-                      id="filter-value"
-                    />
-                  </div>
-                </form>
-                <div class="col-md-2">
-                  <button
-                    type="button"
-                    class="btn coe-btn-primary"
-                    id="add-btn"
-                   >
-                    <i class="far fa-plus-square"></i
-                    ><span> {{ 'AddBtn' | translate }}</span>
-                  </button>
-                </div>
-                <div class="col-md-2">
-                  <button
-                    type="button"
-                    class="btn btn-secundary-pdf"
-                    i18n="@@Pdf"
-                  >
-                    <span><i class="far fa-file-pdf"></i> PDF</span>
-                  </button>
-                </div>
-                <div class="col-md-2">
-                  <button
-                    type="button"
-                    class="btn btn-secundary-csv"
-                    i18n="@@Csv"
-                  >
-                    <span><i class="far fa-file"></i> CSV</span>
-                  </button>
-                </div>
-              </div>
-            </div>
+    <form
+      class="coe-card"
+      #FormElement="ngForm"
+     >
+      <div class="form-row">
+        <div class="form-group p-3 col-md-3 col-xs-12">
+          <label for="id" translate>{{ 'trasnlate.code' | translate }}</label>
+          <input
+            class="form-control"
+      
+            id="code" required [(ngModel)]="productDto.code" name="code"
+            name="code"
+            required
+          />
+        </div>
+
+        <div class="form-group p-3 col-md-3 col-xs-12">
+          <label for="tipo-identificacion-abreviatura" for="id" translate>
+            {{ 'trasnlate.Typecode' | translate }}
+          </label>
+
+          <select
+            class="form-control"
+
+            required
+            
+            name="TipoIdentificacion_Abreviatura"
+            id="tipo-identificacion-abreviatura"
+          
+          >
+            <option
+           
+            >
+               tipoProdcuto
+            </option>
+          </select>
+          <div
+            class="invalid-feedback"
+              >
+            <span *ngIf="">
+              RequiredField
+            </span>
           </div>
+        </div>
+
+        <div class="form-group p-3 col-md-3 col-xs-12">
+          <label for="name" translate
+            >{{ 'trasnlate.Nombres' | translate }}
+            </label
+          >
+          <input
+            type="text"
+            maxlength=""
+            class="form-control"
+            id="name"
+            required [(ngModel)]="productDto.name" name="Name"
+            />
+          <div
+            class="invalid-feedback"
+          >
+            <span>
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group p-3 col-md-3 col-xs-12">
+          <label for="Descripction" translate
+            >Descripción</label
+          >
+          <input
+            type="text"
+            maxlength=""
+            class="form-control"
+            id="Descripction"
+            required [(ngModel)]="productDto.name" name="Descripction"
+            />
+          <div
+            class="invalid-feedback"
+          >
+            <span>
+            </span>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="form-row">
+
+        <div class="form-group p-3 col-md-3 col-xs-12">
+          <label for="fecha-nacimiento" translate>{{ 'trasnlate.FechaIngreso' | translate }}
+             </label>
+
+          <input
+            type="date"
+            class="form-control"
+            id="fecha-nacimiento"
+            name="FechaNacimiento"
+            [disabled]="false"
+          />
+        </div>
+
+        <div class="form-group p-3 col-md-3 col-xs-12">
+          <label for="Precio" translate> {{ 'trasnlate.Precio' | translate }} </label>
+
+          <input
+            type="number"
+            class="form-control"
+            id="salario"
+            name="Precio"
+            required [(ngModel)]="productDto.price" name="Price"
+          />
+        </div>
+
+        <div class="form-group p-3 col-md-3 col-xs-12">
+          <label for="MinimunAlloweb" translate>
+            {{ 'trasnlate.Cantidad' | translate }} 
+          </label>
+
+          <input
+            type="number"
+            class="form-control"
+            id="calificaion-promedio"
+            required [(ngModel)]="productDto.minimunAlloweb" 
+            name="MinimunAlloweb"
+          />
+        </div>
+
+        
+        <div class="form-group p-3 col-md-3 col-xs-12">
+          <label for="calificaion-promedio" translate>
+            {{ 'trasnlate.MinimunAlloweb' | translate }} 
+          </label>
+
+          <input
+            type="number"
+            class="form-control"
+            id="calificaion-promedio"
+            name="CalificaionPromedio"
+          />
+        </div>
+
+        
+      </div>
+
+      <div class="form-row">
+        
+
+        <div
+          class="form-group p-3 col-md-3 col-xs-12 no-gutters align-items-start justify-content-between"
+        >
+          <label translate>             {{ 'trasnlate.Activo' | translate }} 
+ </label>
+          <div class="onoffswitch">
+            <input
+              class="onoffswitch-checkbox"
+              id="activo"
+              type="checkbox"
+              name="Activo"
+              tabindex="0"
+              checked
+            />
+            <label class="onoffswitch-label" for="activo"></label>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="row">
+        <div class="col-sm-12 text-left">
+          <strong>{{ 'RequiredFieldsText' | translate }}</strong>
         </div>
       </div>
 
-      <div class="table-responsive">
-        <table class="table table-striped table-hover" id="persona-table">
-          <thead>
-            <tr>
-              <th  translate>Id</th>
-              <th  translate>TipoIdentificacion_Abreviatura</th>
-              <th  translate>NumeroIdentificacion</th>
-              <th  translate>Nombres</th>
-              <th  translate>Apellidos</th>
-              <th  translate>FechaNacimiento</th>
-              <th  translate>Salario</th>
-              <th  translate>CalificaionPromedio</th>
-              <th  translate>DescripcionHobbies</th>
-              <th  translate>Activo</th>
-              <th  translate>FechaModificacion</th>
-              <th  translate>Opciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr >
-              <td>
-            </td>
-              <td>
-              </td>
-              <td>
-              </td>
-              <td>
-              </td>
-              <td>
-              </td>
-              <td>
-              </td>
-              <td>
-              </td>
-              <td>
-              </td>
-              <td>
-              </td>
-              <td>
-                <input
-                  type="checkbox"
-                  id="object"
-                  disabled
-                />
-              </td>
-              <td>
-              </td>
-              <td class="d-flex">
-                <button
-                  type="button"
-                  ngbTooltip="Editar"
-                  class="edit btn btn-secundary-editar"
-                 
-                >
-                  <i class="far fa-edit"></i>
-                </button>
-                <button
-                  ngbTooltip="Eliminar"
-                  type="button"
-                  class="delete btn btn-secundary-delete"
-               
-                >
-                  <i class="far fa-trash-alt"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="12" class="text-center">
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-              </td>
-            </tr>
-          </tbody>
-          <caption></caption>
-        </table>
+      <div class="row col-md-12 justify-content-end pr-0">
+        <div class="col-md-2 pr-0">
+          <button
+            type="button"
+            class="btn coe-btn-secundary"
+            id="close-btn"
+           
+          >
+            {{ 'CloseBtn' | translate }}
+          </button>
+        </div>
+
+        <div class="col-md-2 col-sm-">
+          <button (click)="getRegister()" class="btn coe-btn-primary" id="submit">
+            {{ 'SaveBtn' | translate }}
+          </button>
+        </div>
       </div>
-    </div>
+
+
+      
+    </form>
   </div>
 </div>
