@@ -14,7 +14,6 @@ import { CreateProductComponent } from './components/create-product/create-produ
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient} from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -36,8 +35,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
             useFactory: HttpLoaderFactory,
             deps: [HttpClient]
         }
-    }),
-    BrowserAnimationsModule
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
