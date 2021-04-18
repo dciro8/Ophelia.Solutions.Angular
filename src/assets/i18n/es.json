@@ -1,7 +1,12 @@
 {"trasnlate":
 {
+  
+  "Typecode": "Tipo Producto*",
+    
+  "code": "Código",
+  "AdminProducLabel": "Administrar Productos",  
   "Inicio": "Iniciooooooo",
-  "Activo": "Activo",
+  "Activo": "Activo*",
   "SaveBtn": "Guardar",
   "AddBtn": "Nuevo",
   "Apellidos": "Apellidos",
@@ -13,7 +18,12 @@
   "FechaNacimiento": "Fecha de nacimiento",
   "Id": "Id",
   "Logout": "Cerrar sesión",
-  "Nombres": "Nombres",
+  "Nombres": "Nombres*",
+  "FechaCreacion": "Fecha Creación*",
+  "Precio": "Precio*",
+  "MinimunAlloweb": "Ingreso mínimo*",
+  
+  "Cantidad": "Amount*",
   "NumeroIdentificacion": "Número de identificación",
   "RequiredFieldsText": "* Los campos marcados son Obligatorios",
   "Salario": "Salario",

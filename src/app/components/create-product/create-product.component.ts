@@ -4,6 +4,7 @@ import { ResponseMessage } from 'src/app/models/ResponseMessage.model';
 import { ProductAllService } from 'src/app/services/Product.service';
 ;
 import { Router } from '@angular/router';
+import {TranslateService} from '@ngx-translate/core';
 
 
 @Component({
@@ -19,7 +20,8 @@ export class CreateProductComponent implements OnInit {
   ProductDto?: ProductDto[];
 
   submitted = false;
-  constructor(private productAllService: ProductAllService) { }
+  constructor(private productAllService: ProductAllService,private translate: TranslateService) {
+    translate.setDefaultLang('es'); }
 
   ngOnInit(): void {
   }

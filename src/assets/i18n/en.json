@@ -1,6 +1,11 @@
 {"trasnlate":
   {
-  "Inicio": "Home123",
+    "AdminProducLabel": "Administrar Productos",  
+    
+    "Typecode": "Tipo Producto*",
+    
+    "code": "Código",
+  "Inicio": "Home",
   "Activo": "Active",
   "SaveBtn": "Save",
   "AddBtn": "Add",
@@ -9,15 +14,21 @@
   "CloseBtn": "Close",
   "DescripcionHobbies": "Description",
   "ElementsNotFound": "Elements not found",
+  "FechaCreacion": "Create date*",
+  "Precio": "Price*",
+  "Cantidad": "Amount*",
+  "MinimunAlloweb": "Ingress MinimunAlloweb*",
+  
   "FechaModificacion": "Modified date",
   "FechaNacimiento": "Birth date",
   "Id": "Id",
   "Logout": "Logout",
-  "Nombres": "Name",
+  "Nombres": "Name*",
   "NumeroIdentificacion": "Id Num",
   "RequiredFieldsText": "* fields are required",
   "Salario": "Salary",
   "TipoIdentificacion_Abreviatura": "Id Type",
+  
   "LogIn": "Log in",
   "Username": "Username",
   "Password": "Password",
