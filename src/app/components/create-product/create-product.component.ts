@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ProductDto } from 'src/app/models/Product.model';
 import { ResponseMessage } from 'src/app/models/ResponseMessage.model';
 import { ProductAllService } from 'src/app/services/Product.service';
-;
+
+import { Util } from 'src/app/common/util';
+
+
 import { Router } from '@angular/router';
 import {TranslateService} from '@ngx-translate/core';
 
@@ -39,16 +42,14 @@ export class CreateProductComponent implements OnInit {
       .subscribe(
         data => {
           this.response= data;
-console.log(this.response);
-
-console.log(this.response.result);
 
 
           if (this.response != undefined && this.response.result !=undefined && this.response.result>0 ) {
             this.submitted=true;
+             Util.printMessage(0);
           }
           else {
-         
+            Util.printMessage(1);
             this.submitted=false;
          }
         },

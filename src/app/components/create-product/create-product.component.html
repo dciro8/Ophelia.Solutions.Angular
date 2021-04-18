@@ -79,7 +79,9 @@
             maxlength=""
             class="form-control"
             id="Descripction"
-            required [(ngModel)]="productDto.name" name="Descripction"
+            required 
+            
+             name="Descripction"
             />
           <div
             class="invalid-feedback"
@@ -135,15 +137,16 @@
 
         
         <div class="form-group p-3 col-md-3 col-xs-12">
-          <label for="calificaion-promedio" translate>
+          <label for="MinimunAlloweb" translate>
             {{ 'trasnlate.MinimunAlloweb' | translate }} 
           </label>
 
           <input
             type="number"
             class="form-control"
-            id="calificaion-promedio"
-            name="CalificaionPromedio"
+            id="MinimunAlloweb"
+            name="MinimunAlloweb"
+            required [(ngModel)]="productDto.minimunAlloweb" 
           />
         </div>
 
@@ -176,7 +179,7 @@
 
       <div class="row">
         <div class="col-sm-12 text-left">
-          <strong>{{ 'RequiredFieldsText' | translate }}</strong>
+          <strong>{{ 'trasnlate.RequiredFieldsText' | translate }}</strong>
         </div>
       </div>
 
@@ -184,20 +187,81 @@
         <div class="col-md-2 pr-0">
           <button
             type="button"
-            class="btn coe-btn-secundary"
+            class="boton_personalizado1"
             id="close-btn"
            
           >
-            {{ 'CloseBtn' | translate }}
+            {{ 'trasnlate.CloseBtn' | translate }}
           </button>
         </div>
 
         <div class="col-md-2 col-sm-">
-          <button (click)="getRegister()" class="btn coe-btn-primary" id="submit">
-            {{ 'SaveBtn' | translate }}
+          <button (click)="getRegister() ; productDto.code=''; productDto.name=''; productDto.price=0; productDto.quantity=0; productDto.minimunAlloweb=0;" class="btn boton_personalizado" id="submit">
+            {{ 'trasnlate.SaveBtn' | translate }}
           </button>
         </div>
       </div>
+
+
+      <div class="col-md-12">
+        <h4>Get all Product</h4>
+
+        <br>
+    <br>
+    <div *ngIf="submitted" class="col-md-12">
+        <h4>Get Ingress Product</h4>
+        
+          <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Name Product</th>
+                <th scope="col">Code Product</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                
+                <th scope="col">Minimun Allo Web</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+              
+                    <th scope="row">{{productDto.name }} </th>
+                    <td> {{productDto.code }} </td>
+                    <td>{{productDto.price  | currency}} </td>
+                    <td>{{productDto.quantity }} </td>
+                    <td>{{productDto.minimunAlloweb}} </td>
+                  </tr>
+             
+            </tbody>
+          </table>
+        
+          <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Name Product</th>
+                <th scope="col">Code Product</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                
+                <th scope="col">Minimun Allo Web</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr 
+              *ngFor="let val of ProductDto; let i = index">
+              
+                <th scope="row">{{val.name }} </th>
+                <td> {{val.code }} </td>
+                <td>{{val.price  | currency}} </td>
+                <td>{{val.quantity }} </td>
+                <td>{{val.minimunAlloweb}} </td>
+              </tr>
+             
+            </tbody>
+          </table>
+      </div>
+  </div>
+
 
 
 
