@@ -31,8 +31,26 @@ export class ProductAllService {
     return this.http.get<any>(`${baseUrl}${url}` + year);
   }
 
-  setProduct(model: ProductDto): Observable<ResponseMessage> {
+  
+    getProductForId(id: string): Observable<ProductDto> {
 
+    let body = new URLSearchParams();
+    let Id =id;
+    var url: string = "/api/v1/product/GetProductId?Id=";
+    return  this.http.get<ProductDto>(`${baseUrl}${url}` + Id );
+  }
+
+  
+  DeleteProductForId(id: string): Observable<ProductDto> {
+
+    let body = new URLSearchParams();
+    let Id =id;
+    var url: string = "/api/v1/product/GetProductId?Id=";
+    return  this.http.get<ProductDto>(`${baseUrl}${url}` + Id );
+  }
+
+  setProduct(model: ProductDto): Observable<ResponseMessage> {
+console.log('modelvale',model);
     var url: string = "/api/v1/product/CreteProduct";
 
     model.id = Guid.create().toString();
