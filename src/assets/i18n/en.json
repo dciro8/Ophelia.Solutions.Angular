@@ -1,10 +1,8 @@
 {"trasnlate":
   {
-    "AdminProducLabel": "Administrar Productos",  
-    
-    "Typecode": "Tipo Producto*",
-    
-    "code": "Código",
+  "AdminProducLabel": "Administrar Productos",     
+  "Typecode": "Tipo Producto*",
+  "code": "Código",
   "Inicio": "Home",
   "Activo": "Active",
   "SaveBtn": "Save",
@@ -16,9 +14,9 @@
   "ElementsNotFound": "Elements not found",
   "FechaCreacion": "Create date*",
   "Precio": "Price*",
+  "FechaIngreso": "Date Ingress*",
   "Cantidad": "Amount*",
   "MinimunAlloweb": "Ingress MinimunAlloweb*",
-  
   "FechaModificacion": "Modified date",
   "FechaNacimiento": "Birth date",
   "Id": "Id",

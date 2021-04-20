@@ -93,3 +93,355 @@ html
 // Botones UI
 
 
+.btn-secundary-delete{
+  outline: 0;
+  border-color: $color-btn-secundary-delete;
+  padding: 10px 12px;
+  margin: 2px;
+  color: $color-btn-secundary-delete;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn-secundary-delete:hover,
+.btn-secundary-delete:active,
+.btn-secundary-delete:focus{
+  color: #ffffff;
+  background-color: $color-btn-secundary-delete;
+  box-shadow: 0 2px 10px 0 $color-btn-secundary-delete;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn-secundary-pdf{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  outline: 0;
+  width: 100%;
+  border-color: $color-btn-secundary-pdf;
+  padding: 10px;
+  margin: 10px 0px;
+  color: $color-btn-secundary-pdf;
+  font-size: 18px;
+  font: bold;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;}
+
+.btn-secundary-pdf:hover,
+.btn-secundary-pdf:active,
+.btn-secundary-pdf:focus{
+  color: $color-btn-secundary-pdf;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px 0 #0000005d;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;}
+
+
+  .btn-secundary-editar{
+  outline: 0;
+  border-color: $color-btn-secundary-editar;
+  padding: 10px 12px;
+  margin: 2px;
+  color: $color-btn-secundary-editar;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn-secundary-editar:hover,
+.btn-secundary-editar:active,
+.btn-secundary-editar:focus{
+  color: #ffffff;
+  background-color: $color-btn-secundary-editar;
+  box-shadow: 0 2px 10px 0 $color-btn-secundary-editar;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;}
+
+.btn-secundary-ver{
+  outline: 0;
+  border-color: $color-btn-secundary-ver;
+  padding: 10px 12px;
+  margin: 2px;
+  color: $color-btn-secundary-ver;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;}
+
+.btn-secundary-ver:hover,
+.btn-secundary-ver:active,
+.btn-secundary-ver:focus{
+  color: #ffffff;
+  background-color: $color-btn-secundary-ver;
+  box-shadow: 0 2px 10px 0 $color-btn-secundary-ver;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;}
+
+/* Nav bar light */
+
+.nav-logo{
+  widows: 50px;
+  height: 60px;}
+
+
+.coe-light-one-nav{
+  background-color:$light-one-nav;
+  box-shadow: 0 1px 7px 0 #7a7a7a8e;
+}
+
+
+
+
+.coe-btn-primary{
+  font-family: Arial, Helvetica, sans-serif;
+  outline: 0;
+  background: $color-btn-primary;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 100%;
+  border: 0;
+  padding: 10px;
+  margin: 10px 0px;
+  color: #FFFFFF;
+  font-size: 18px;
+  font: bold;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;}
+
+
+.coe-btn-primary:hover,
+.coe-btn-primary:active,
+.coe-btn-primary:focus{
+  background: $color-btn-primary-hover;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px 0 #1877F2;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.coe-btn-secundary{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  outline: 0;
+  width: 100%;
+  border-color: $color-btn-secundary;
+  padding: 10px;
+  margin: 10px 0px;
+  color: $color-btn-secundary;
+  font-size: 18px;
+  font: bold;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;}
+
+.coe-btn-secundary:hover,
+.coe-btn-secundary:active,
+.coe-btn-secundary:focus{
+  color: $color-btn-secundary;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px 0 #0000005d;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+
+.btn-secundary-pdf{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  outline: 0;
+  width: 100%;
+  border-color: $color-btn-secundary-pdf;
+  padding: 10px;
+  margin: 10px 0px;
+  color: $color-btn-secundary-pdf;
+  font-size: 18px;
+  font: bold;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;}
+
+.btn-secundary-pdf:hover,
+.btn-secundary-pdf:active,
+.btn-secundary-pdf:focus{
+  color: $color-btn-secundary-pdf;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px 0 #0000005d;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;}
+
+
+.btn-secundary-csv{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  outline: 0;
+  width: 100%;
+  border-color: $color-btn-secundary-csv;
+  padding: 10px;
+  margin: 10px 0px;
+  color: $color-btn-secundary-csv;
+  font-size: 18px;
+  font: bold;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;}
+
+.btn-secundary-csv:hover,
+.btn-secundary-csv:active,
+.btn-secundary-csv:focus{
+  color: $color-btn-secundary-csv;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px 0 #0000005d;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;}
+
+
+  
+.onoffswitch{
+  position: relative;
+  width: 55px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;}
+
+
+.onoffswitch-checkbox{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;}
+
+
+.onoffswitch-label{
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  border: 2px solid #E3E3E3;
+  border-radius: 30px;
+  background-color: #FFFFFF;
+  transition: background-color 0.3s ease-in;}
+
+
+.onoffswitch-label:before{
+  content: "";
+  display: block;
+  width: 30px;
+  margin: 0px;
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 23px;
+  border: 2px solid #E3E3E3;
+  border-radius: 30px;
+  transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked+.onoffswitch-label{
+  background-color: #1877F2;
+}
+
+.onoffswitch-checkbox:checked+.onoffswitch-label,
+.onoffswitch-checkbox:checked+.onoffswitch-label:before{
+  border-color: #1877F2;}
+
+
+.onoffswitch-checkbox:checked+.onoffswitch-label:before{
+  right: 0px;}
+
+
+
+/* Termina switch */
+
+.coe-welcome-title h1{
+  color: rgb(255, 255, 255);
+  font-size: 70px;
+  font-weight: 700;
+  z-index: 3;
+  padding-left:150px;
+}
+.coe-welcome-title h3{
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  font-weight: 600;
+  z-index: 3;
+  padding-left:150px;}
+
+.coe-welcome-title p{
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-weight: 400;
+  z-index: 3;
+  padding-left:150px;}
+
+
+// card-coe
+
+.coe-card{
+  box-shadow: 0 2px 10px 0 #0000002e;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 15px;
+  height: 100%;
+  width: 100%;
+}
+

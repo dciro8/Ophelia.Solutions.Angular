@@ -11,6 +11,9 @@ import { ProductAllService } from 'src/app/services/Product.service';
 export class GetAllProductListComponent implements OnInit {
   ProductDto?: ProductDto[];
   currentPage = 1;
+  filteredObjectList!: ProductDto[];
+  objectList!: ProductDto[];
+  _filterValue!: string;
   // totalItems: number;
   // _filterValue: string;
 
@@ -30,10 +33,36 @@ export class GetAllProductListComponent implements OnInit {
     this.getProductAll();
   }
 
+   get filterValue(): string {
+   return this._filterValue;
+  }
+
   
-  // get filterValue(): string {
-  //   // return this._filterValue;
-  // }
+  set filterValue(value: string) {
+    this._filterValue = value;
+
+    console.log('this.objectList ',this.objectList );
+
+if (value ==''){
+this.ProductDto=this.objectList ;
+}
+else{
+    this.filteredObjectList = this.filterValue
+      ? this.perfomFilter()
+      : this.objectList;
+  }
+}
+
+  perfomFilter(): ProductDto[] {
+    const filterBy = this.filterValue.toLocaleLowerCase();
+    var value = this.objectList.filter(
+      (cPersona: ProductDto) =>
+        cPersona.name?.toString().toLocaleLowerCase().indexOf(filterBy) !== -1
+    );
+this.ProductDto=value;
+    return value ;
+  }
+
 
   // set filterValue(value: string) {
   //   this._filterValue = value;
@@ -78,6 +107,8 @@ export class GetAllProductListComponent implements OnInit {
       .subscribe(
         data => {
           this.ProductDto = data;
+            this.objectList =  this.ProductDto;
+          this.filteredObjectList = this.objectList;
           console.log('this.ProductDto',this.ProductDto);
         },
         error => {

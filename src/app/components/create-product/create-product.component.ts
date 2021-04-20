@@ -10,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import {TranslateService} from '@ngx-translate/core';
 import { Observable } from 'rxjs/internal/Observable';
 
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-create-product',
@@ -26,7 +27,8 @@ export class CreateProductComponent implements OnInit {
   isEnable =true;
   constructor(private productAllService: ProductAllService,
     private translate: TranslateService,
-    private readonly route: ActivatedRoute) {
+    private readonly route: ActivatedRoute,
+    private readonly location: Location) {
     translate.setDefaultLang('es');
 
 
@@ -40,6 +42,11 @@ export class CreateProductComponent implements OnInit {
     //     this.isEnable=false;
     // }
     //  });
+  }
+
+  
+  onBack(): void {
+    this.location.back();
   }
 
   ngOnInit(): void {
