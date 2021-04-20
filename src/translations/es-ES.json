@@ -1,5 +1,5 @@
 {
-  "Inicio": "Iniciooooooo",
+  "Inicio": "Inicio",
   "Activo": "Activo",
   "SaveBtn": "Guardar",
   "AddBtn": "Nuevo",
@@ -28,5 +28,8 @@
   "SystemParameters": "Parámetros del Sistema",
   "Persona": "Persona",
   "TipoIdentificacion": "Tipo de idenficación",
-  "RequiredField": "Este campo es requerido"
+  "RequiredField": "Este campo es requerido",
+  "GetAllProducts":"Obtener Productos",
+  "GetSaleYear":"Obtener ventas del año",
+  "SetProduct":"Ingresar Producto"
 }

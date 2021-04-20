@@ -3,28 +3,28 @@
  */
 
 // Set Font Awesome font path
-$fa-font-path: "~@fortawesome/fontawesome-free/webfonts"
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 
-$gradient-fondo-login: linear-gradient(90deg, #022758d5 5%,rgba(18, 87, 178, 0.61), rgba(19, 124, 216, 0.719) 100%)
+$gradient-fondo-login: linear-gradient(90deg, #022758d5 5%,rgba(18, 87, 178, 0.61), rgba(19, 124, 216, 0.719) 100%);
 
-$color-btn-primary:  linear-gradient(to right,#1877F2, #0752B1)
+$color-btn-primary:  linear-gradient(to right,#1877F2, #0752B1);
 
-$color-btn-primary-hover: linear-gradient( to left,#1877F2, #0752B1)
+$color-btn-primary-hover: linear-gradient( to left,#1877F2, #0752B1);
 
-$color-btn-secundary: rgb(24, 119, 242)
+$color-btn-secundary: rgb(24, 119, 242);
 
-$color-btn-secundary-pdf: rgb(213, 25, 39)
+$color-btn-secundary-pdf: rgb(213, 25, 39);
 
-$color-btn-secundary-csv: rgb(18, 162, 81)
+$color-btn-secundary-csv: rgb(18, 162, 81);
 
-$color-btn-secundary-editar: rgb(24, 119, 242)
-$color-btn-secundary-ver: rgb(18, 162, 81)
-$color-btn-secundary-delete: rgb(213, 25, 39)
+$color-btn-secundary-editar: rgb(24, 119, 242);
+$color-btn-secundary-ver: rgb(18, 162, 81);
+$color-btn-secundary-delete: rgb(213, 25, 39);
 
-$light-one-nav: rgba(255, 255, 255, 0.925)
+$light-one-nav: rgba(255, 255, 255, 0.925);
 
 
 // Use Bootstrap defaults for other variables, imported here so we can access all app variables in one place when used
 // in components.
-@import "~bootstrap/scss/_functions"
-@import "~bootstrap/scss/_variables"
+@import "~bootstrap/scss/_functions";
+@import "~bootstrap/scss/_variables";

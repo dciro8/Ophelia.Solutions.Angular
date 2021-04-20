@@ -35,7 +35,7 @@
               <button
                 type="button"
                 ngbTooltip="Editar"
-                class="edit btn btn btn-outline-danger"
+                class="edit btn btn-secundary-editar"
                 (click)="update(val)"
                 
                >
@@ -44,7 +44,7 @@
               <button
                 ngbTooltip="Eliminar"
                 type="button"
-                class="btn btn-light"
+                class="delete btn btn-secundary-delete"
                 (click)="delete(val)"
                >
                 <i class="far fa-trash-alt"></i>
@@ -55,5 +55,7 @@
         </tbody>
       </table>
   </div>
-
+  <app-pagination
+      >
+      </app-pagination>
 </div>

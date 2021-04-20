@@ -191,16 +191,17 @@
         <div class="col-md-2 pr-0">
           <button
             type="button"
-            class="boton_personalizado1"
-            id="close-btn"
-           
+            class="btn coe-btn-secundary"
+             
           >
             {{ 'trasnlate.CloseBtn' | translate }}
           </button>
         </div>
 
         <div class="col-md-2 col-sm-">
-          <button (click)="getRegister() ; productDto.code=''; productDto.name=''; productDto.price=0; productDto.quantity=0; productDto.minimunAlloweb=0;" class="btn boton_personalizado" id="submit">
+          <button (click)="getRegister() ; productDto.code=''; productDto.name=''; productDto.price=0; productDto.quantity=0; productDto.minimunAlloweb=0;"
+          class="btn coe-btn-primary" id="submit" id="close-btn"
+            >
             {{ 'trasnlate.SaveBtn' | translate }}
           </button>
         </div>

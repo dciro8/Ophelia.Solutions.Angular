@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'add', component: GetSaleYearComponent },
   { path: 'SetProduct', component: CreateProductComponent },
   {path: 'SetProduct/:id', component:  CreateProductComponent },
-  {path: 'SetProduct/:idDelete', component:  CreateProductComponent }
+  {path: 'SetDeleteId/:idDelete', component:  CreateProductComponent }
   
 ];
 

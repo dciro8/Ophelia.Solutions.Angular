@@ -47,12 +47,17 @@ export class CreateProductComponent implements OnInit {
 
 
 
-    console.log('paramidDelete', param);
-    
+    console.log('idDelete', param);
+
+    if( param['idDelete'] != undefined)
+    {
+      this.deleteProductId(param['idDelete']);
+      
+    }
+    else{
     if( param['id'] != undefined)
     {
-      //this.getProductId(param['id']);
-      this.deleteProductId(param['id']);
+      this.getProductId(param['id']);
       
       console.log('this.productDto12345', this.productDto);
           this.isEnable=true;
@@ -61,6 +66,7 @@ export class CreateProductComponent implements OnInit {
 
             this.productDto.code='dciro1';
        }
+      }
      });
   }
 
@@ -96,10 +102,10 @@ export class CreateProductComponent implements OnInit {
  
   this.productAllService.getProductForId(idProduct)
       .subscribe(
-        data => {
+        (data: any) => {
           console.log('antes');
           console.log('data',data);
-          this.productDto = data;
+          this.productDto = data.pop();
         },
         error => {
           console.log(error);

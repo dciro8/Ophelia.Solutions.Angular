@@ -14,6 +14,10 @@ import { CreateProductComponent } from './components/create-product/create-produ
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient} from '@angular/common/http';
+import { HeaderComponent } from './components/header/header.component';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,9 @@ import {HttpClient} from '@angular/common/http';
     GetSaleYearComponent,
     TutorialDetailsComponent,
     GetAllProductListComponent,
-    CreateProductComponent
+    CreateProductComponent,
+    HeaderComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +35,7 @@ import {HttpClient} from '@angular/common/http';
     FormsModule,
     HttpClientModule,
     HttpClientModule,
+    NgbModule,
     TranslateModule.forRoot({
         loader: {
             provide: TranslateLoader,

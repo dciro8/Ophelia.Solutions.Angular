@@ -39,6 +39,8 @@
   "Opciones": "Options",
   "SystemParameters": "System parameters",
   "Persona": "Person123",
-  "TipoIdentificacion": "ID Type12"
-
+  "TipoIdentificacion": "ID Type12",
+  "GetAllProducts":"Get All Products",
+  "GetSaleYear":"Get Sale ForYear",
+  "SetProduct":"Set Product"
 }}
