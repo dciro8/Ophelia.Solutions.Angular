@@ -10,7 +10,9 @@ const routes: Routes = [
   { path: 'ProductAll', component: GetAllProductListComponent },
   { path: 'ProductAll/:id', component: TutorialDetailsComponent },
   { path: 'add', component: GetSaleYearComponent },
-  { path: 'SetProduct', component: CreateProductComponent }
+  { path: 'SetProduct', component: CreateProductComponent },
+  {path: 'SetProduct/:id', component:  CreateProductComponent },
+  {path: 'SetProduct/:idDelete', component:  CreateProductComponent }
   
 ];
 

@@ -30,35 +30,12 @@ export class GetAllProductListComponent implements OnInit {
           console.log(error);
         });
   }
-
   
   update(ObjectValue: ProductDto) {
     this.router.navigate(['/SetProduct/' + ObjectValue.id]);
   console.log('ObjectValue',ObjectValue);
   }
-
   delete(ObjectDelete: ProductDto) {
-    this.router.navigate(['/DeleteProduct/' +ObjectDelete.id]);
-    console.log('ObjectDelete',ObjectDelete);
-  }
-
-  
-  setCreteProduct(): void {
-    this.productAllService.setProduct(this.productDto)
-      .subscribe(
-        data => {
-          this.response= data;
-      if (this.response != undefined && this.response.result !=undefined && this.response.result>0 ) {
-            this.submitted=true;
-             Util.printMessage(0);
-          }
-          else {
-            Util.printMessage(1);
-            this.submitted=false;
-         }
-        },
-        error => {
-          console.log(error);
-        });
+    this.router.navigate(['/SetProduct/' + ObjectDelete.id]);
   }
 }

@@ -1,12 +1,12 @@
 
-export class ProductYearDto {
+export interface ProductYearDto {
   year?: number;
 
 }
 
 
 
-export class SalesForYear {
+export interface SalesForYear {
   total?: number;
   name?: string;
 }

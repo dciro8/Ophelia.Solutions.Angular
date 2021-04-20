@@ -20,7 +20,6 @@ export class GetSaleYearComponent implements OnInit {
   }
 
   getRegister(): void {
-    console.log('year', this.productYear);
 
     this.getProductForYear();
   }

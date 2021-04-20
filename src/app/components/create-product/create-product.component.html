@@ -7,22 +7,24 @@
 
     <form
       class="coe-card"
-      #FormElement="ngForm"
-     >
+      #FormElement="ngForm">
       <div class="form-row">
         <div class="form-group p-3 col-md-3 col-xs-12">
           <label for="id" translate>{{ 'trasnlate.code' | translate }}</label>
           <input
             class="form-control"
-      
-            id="code" required [(ngModel)]="productDto.code" name="code"
+            id="code" 
+             [(ngModel)]="productDto.code"
             name="code"
+            #code="ngModel"
             required
-          />
+            [disabled]="isEnable" 
+            />
         </div>
 
         <div class="form-group p-3 col-md-3 col-xs-12">
-          <label for="tipo-identificacion-abreviatura" for="id" translate>
+          <label for="tipo-ide
+          ntificacion-abreviatura" for="id" translate>
             {{ 'trasnlate.Typecode' | translate }}
           </label>
 
@@ -60,7 +62,9 @@
             maxlength=""
             class="form-control"
             id="name"
-            required [(ngModel)]="productDto.name" name="Name"
+            required [(ngModel)]="productDto.name" 
+            name="name"
+            #name="ngModel"
             />
           <div
             class="invalid-feedback"

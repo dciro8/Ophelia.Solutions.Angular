@@ -22,9 +22,7 @@ export class CreateProductComponent implements OnInit {
 
   response: ResponseMessage={};
   ProductDto?: ProductDto[];
-
   submitted = false;
-
   isEnable =true;
   constructor(private productAllService: ProductAllService,
     private translate: TranslateService,
@@ -49,11 +47,14 @@ export class CreateProductComponent implements OnInit {
 
 
 
-    console.log('param', param['id']);
+    console.log('paramidDelete', param);
+    
     if( param['id'] != undefined)
     {
-      this.getProductId(param['id']);
-          console.log('this.productDto12345', this.productDto);
+      //this.getProductId(param['id']);
+      this.deleteProductId(param['id']);
+      
+      console.log('this.productDto12345', this.productDto);
           this.isEnable=true;
     }else{
            this.isEnable=false;
@@ -92,35 +93,13 @@ export class CreateProductComponent implements OnInit {
 
 
  getProductId(idProduct:string){
-    this.productAllService.getProductForId(idProduct)
+ 
+  this.productAllService.getProductForId(idProduct)
       .subscribe(
         data => {
-
           console.log('antes');
-
           console.log('data',data);
-
-
           this.productDto = data;
-          
-          console.log('this.code',this.productDto.code);
-          
-          console.log('this.mini',this.productDto.minimunAlloweb);
-          
-          console.log('this.name',this.productDto.name);
-          
-          console.log('this.price',this.productDto.price);
-          
-          console.log('this.quantity',this.productDto.quantity);
-   
-      // if (this.productDto  != undefined && this.productDto!=undefined  ) {
-      //   Util.printMessage(0);
-
-      //     }
-      //     else {
-      //       Util.printMessage(1);
-      //       this.submitted=false;
-      //    }
         },
         error => {
           console.log(error);
@@ -130,6 +109,21 @@ export class CreateProductComponent implements OnInit {
   }
 
 
+  deleteProductId(idProduct:string){
+ 
+    this.productAllService.DeleteProductForId(idProduct)
+        .subscribe(
+          data => {
+            console.log('data',data);
+          },
+          error => {
+            console.log(error);
+          });
+  
+          return  this.productDto;
+    }
+  
+  
   getProductAll(): void {
     this.productAllService.getAll()
       .subscribe(

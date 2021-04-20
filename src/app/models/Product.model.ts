@@ -1,11 +1,12 @@
 
-export class ProductDto
+export interface ProductDto
 {
   id?:string; 
   name?:string; 
   code?:string;
   price?: number;
   quantity?: number;
- minimunAlloweb?: number;
+  minimunAlloweb?: number;
+  isSave?: boolean;
 }
 

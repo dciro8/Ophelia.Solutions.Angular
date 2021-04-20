@@ -41,12 +41,11 @@ export class ProductAllService {
   }
 
   
-  DeleteProductForId(id: string): Observable<ProductDto> {
-
+  DeleteProductForId(id: string): Observable<number> {
     let body = new URLSearchParams();
     let Id =id;
-    var url: string = "/api/v1/product/GetProductId?Id=";
-    return  this.http.get<ProductDto>(`${baseUrl}${url}` + Id );
+    var url: string = "/api/v1/product/DeleteProductId?Id=";
+    return  this.http.get<number>(`${baseUrl}${url}` + Id );
   }
 
   setProduct(model: ProductDto): Observable<ResponseMessage> {

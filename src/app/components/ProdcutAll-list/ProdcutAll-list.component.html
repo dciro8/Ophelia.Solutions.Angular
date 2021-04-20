@@ -16,8 +16,9 @@
             <th scope="col">Code Product</th>
             <th scope="col">Price</th>
             <th scope="col">Quantity</th>
-            
             <th scope="col">Minimun Allo Web</th>
+          
+            <th scope="col">Option</th>
           </tr>
         </thead>
         <tbody>
@@ -29,6 +30,26 @@
             <td>{{val.price  | currency}} </td>
             <td>{{val.quantity }} </td>
             <td>{{val.minimunAlloweb}} </td>
+            
+            <td class="d-flex">
+              <button
+                type="button"
+                ngbTooltip="Editar"
+                class="edit btn btn btn-outline-danger"
+                (click)="update(val)"
+                
+               >
+                <i class="far fa-edit"></i>
+              </button>
+              <button
+                ngbTooltip="Eliminar"
+                type="button"
+                class="btn btn-light"
+                (click)="delete(val)"
+               >
+                <i class="far fa-trash-alt"></i>
+              </button>
+            </td>
           </tr>
          
         </tbody>
