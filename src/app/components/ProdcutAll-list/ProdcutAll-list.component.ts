@@ -14,9 +14,8 @@ export class GetAllProductListComponent implements OnInit {
   filteredObjectList!: ProductDto[];
   objectList!: ProductDto[];
   _filterValue!: string;
-  // totalItems: number;
-  // _filterValue: string;
-
+  items : any=[];
+  pageOfItems?:ProductDto[];
 
   constructor(private productAllService: ProductAllService,
     private  router: Router,
@@ -24,24 +23,15 @@ export class GetAllProductListComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-
-    const page = this.route.snapshot.queryParams.page || 1;
-    if (page) {
-      this.currentPage = Number(page);
-    }
-    // this.GetAllItems(this.currentPage);
     this.getProductAll();
   }
 
    get filterValue(): string {
    return this._filterValue;
   }
-
   
   set filterValue(value: string) {
     this._filterValue = value;
-
-    console.log('this.objectList ',this.objectList );
 
 if (value ==''){
 this.ProductDto=this.objectList ;
@@ -64,44 +54,6 @@ this.ProductDto=value;
   }
 
 
-  // set filterValue(value: string) {
-  //   this._filterValue = value;
-  //   this.filteredObjectList = this.filterValue
-  //     ? this.perfomFilter()
-  //     : this.objectList;
-  // }
-
-  // perfomFilter(): ProductDto[] {
-  //   const filterBy = this.filterValue.toLocaleLowerCase();
-  //   return this.objectList.filter(
-  //     (cPersona: ProductDto) =>
-  //       cPersona.Id.toString().toLocaleLowerCase().indexOf(filterBy) !== -1
-  //   );
-  // }
-
-  
-  onNext(page: number): void {
-    // this.filterValue = '';
-    this.currentPage = page;
-    //this.GetAllItems(page);
-  }
-
-
-  // GetAllItems(page: number): void {
-  //   this.spinner.show();
-  //   this.personaService.getByParams('', page).subscribe(
-  //     (operationResult) => {
-  //       this.objectList = operationResult.ResultData;
-  //       this.filteredObjectList = this.objectList;
-  //       this.spinner.hide();
-  //       this.totalItems = operationResult.RowsAffected;
-  //     },
-  //     (error: HttpErrorResponse) => {
-  //       this.errorService.checkError(error);
-  //     }
-  //   );
-  // }
-
   getProductAll(): void {
     this.productAllService.getAll()
       .subscribe(
@@ -109,12 +61,19 @@ this.ProductDto=value;
           this.ProductDto = data;
             this.objectList =  this.ProductDto;
           this.filteredObjectList = this.objectList;
-          console.log('this.ProductDto',this.ProductDto);
+          this.items =this.ProductDto.fill(this.ProductDto[2]).map((_x, i) => ({ id:this.objectList[i], name: `${i + 0}`}));
+          console.log(this.items );
         },
         error => {
           console.log(error);
         });
   }
+
+  
+  onChangePage(pageOfItems: Array<any>) {
+    // update current page of items
+    this.pageOfItems = pageOfItems;
+}
   
   update(ObjectValue: ProductDto) {
     this.router.navigate(['/SetProduct/' + ObjectValue.id]);
@@ -129,8 +88,6 @@ if (ObjectDelete.id != undefined){
   this.getProductAll();
 
 }
-
-  //this.deleteProductId(ObjectDelete.id );  
 }
 
   

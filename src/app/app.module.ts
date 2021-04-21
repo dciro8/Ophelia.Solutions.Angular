@@ -18,7 +18,7 @@ import { HeaderComponent } from './components/header/header.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PaginationComponent } from './components/pagination/pagination.component';
-
+import { JwPaginationModule } from 'jw-angular-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +30,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     PaginationComponent
   ],
   imports: [
+    JwPaginationModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
